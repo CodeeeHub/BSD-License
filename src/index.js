@@ -13,6 +13,7 @@
 //   return img;
 // };
 
+// // Replace each image with a skeleton image
 // for (let i = 0; i < images.length; i++) {
 //   const originalImage = images[i];
 //   const skeletonImage = createSkeletonImage(
@@ -22,12 +23,21 @@
 //   originalImage.parentNode.replaceChild(skeletonImage, originalImage);
 // }
 
+// // Function to replace skeleton images with actual images
 // const replaceWithActualImages = () => {
-//      for (let i = 0; i < images.length; i++) {
-//           const originalImg = images[i];
-//           console.log(originalImg)
-//      }
-//    };
+//   for (let i = 0; i < images.length; i++) {
+//     const originalImg = images[i];
+//     const parentNode = originalImg.parentNode;
+//     const skeletonImage = parentNode.querySelector(".skeleton-image");
+//     if (skeletonImage) {
+//       const actualImage = document.createElement("img");
+//       actualImage.src = originalImg.src;
+//       actualImage.width = originalImg.width;
+//       actualImage.height = originalImg.height;
+//       parentNode.replaceChild(actualImage, skeletonImage);
+//     }
+//   }
+// };
 
-// setTimeout(replaceWithActualImages, 100);
-
+// // Call replaceWithActualImages after a delay
+// setTimeout(replaceWithActualImages(), 100);
